@@ -12,16 +12,19 @@ public class Trial {
 		// A : Are
 		// Y : You
 		
-		formatTheInput();
-		display();
-	}
-
-	private static void formatTheInput() {
-		// TODO Auto-generated method stub
 		
+		display(formatTheInput(sampleInput));
 	}
 
-	private static void display() {
+	private static String formatTheInput(String sampleInput) {
+		// TODO Auto-generated method stub
+		String StringToReturn = "";
+		// Code to format the String
+		
+		return StringToReturn;
+	}
+
+	private static void display(String outputString) {
 		// TODO Auto-generated method stub
 		
 	}
