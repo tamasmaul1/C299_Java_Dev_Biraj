@@ -19,6 +19,10 @@ public class Trial {
 	private static String formatTheInput(String sampleInput) {
 		// TODO Auto-generated method stub
 		String StringToReturn = "";
+		//Step 1 : Split the String
+		//Step 2 : Extract first Char of each word.
+		//Step 3 : Add the Extracted Char as 'key' to a Map/Set/Table
+		
 		// Code to format the String
 		
 		return StringToReturn;
