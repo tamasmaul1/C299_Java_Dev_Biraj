@@ -35,6 +35,7 @@ public class JavaBasic_ControlStatements {
 			System.out.println("Condition Met");
 		else if (isNumberOdd(numberToCheck)) {
 			
+			System.out.println("Variable was altered");
 		}
 		else
 		{
@@ -44,7 +45,10 @@ public class JavaBasic_ControlStatements {
 
 	private static boolean isNumberOdd(int numberToCheck) {
 		// TODO Auto-generated method stub
-		return false;
+		boolean value = false;
+		
+		System.out.println(value);
+		return value;
 	}
 
 	private static boolean isNumberEven(int numberToCheck) {

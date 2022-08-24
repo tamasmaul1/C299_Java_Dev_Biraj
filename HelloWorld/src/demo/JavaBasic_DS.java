@@ -57,7 +57,7 @@ public class JavaBasic_DS {
 		System.out.println("Non Continoius Memory Allocation");
 		System.out.println("LinkedList");
 
-		List<String> StringList = new ArrayList<String>();
+		var StringList = new ArrayList<String>();
 
 		String valueToBeAdded = "";
 
