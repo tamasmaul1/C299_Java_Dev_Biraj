@@ -1,6 +1,12 @@
 package demo;
 
+import java.util.Scanner;
+
 public class Demo {
+
+	static private String initMsg = "Enter Number of rounds to play";
+	static private String errorMsg = "Not a valid input. Program shutting down";
+	static private String inputMsg = "Enter your choice from : Rock, Paper, Scissors";
 
 	public static void main(String[] args) {
 
@@ -13,8 +19,6 @@ public class Demo {
 		 * 
 		 * Each round is played according to the requirements below.
 		 */
-		String initMsg = "Enter Number of rounds to play";
-		String errorMsg = "Enter Number of rounds to play";
 
 		output(initMsg);
 		String input = input();
@@ -29,6 +33,7 @@ public class Demo {
 	}
 
 	private static void play() {
+		output(inputMsg);
 		// TODO Auto-generated method stub
 
 	}
@@ -37,7 +42,14 @@ public class Demo {
 
 		boolean result = false;
 
-		int tempInput = Integer.parseInt(input);
+		int tempInput;
+		try {
+			tempInput = Integer.parseInt(input);
+		} catch (NumberFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return result;
+		}
 
 		if ((1 <= tempInput) && (tempInput <= 10))
 			result = true;
@@ -56,6 +68,9 @@ public class Demo {
 	private static String input() {
 		// TODO Auto-generated method stub
 		String input = "";
+		Scanner sc = new Scanner(System.in); // System.in is a standard input stream
+
+		input = sc.next();
 
 		return input;
 	}
