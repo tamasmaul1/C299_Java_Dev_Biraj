@@ -10,16 +10,6 @@ public class Demo {
 
 	public static void main(String[] args) {
 
-		/*
-		 * The program first asks the user how many rounds he/she wants to play. Maximum
-		 * number of rounds = 10, minimum number of rounds = 1. If the user asks for
-		 * outside the range the program prints an error message and quits.
-		 * 
-		 * If the number of rounds is in range, the program plays that number of rounds.
-		 * 
-		 * Each round is played according to the requirements below.
-		 */
-
 		output(initMsg);
 		String input = input();
 
@@ -34,8 +24,26 @@ public class Demo {
 
 	private static void play() {
 		output(inputMsg);
+		if(isChoiceValid(input())) {
+			
+			
+		}
+		
+		else
+		{
+			play();
+		}
 		// TODO Auto-generated method stub
 
+	}
+
+	private static boolean isChoiceValid(String input) {
+		
+		boolean result = false;
+		// TODO Auto-generated method stub
+		
+
+		return result;
 	}
 
 	private static boolean isInputValid(String input) {
