@@ -15,21 +15,30 @@ public class SpringSampleApplication {
 		SpringApplication.run(SpringSampleApplication.class, args);
 
 		System.out.println("Spring Sample Application");
+
 	}
 
 	@Bean
-	public CommandLineRunner demo(AppUserRepository appUserRepository) {
+	public CommandLineRunner demo(AppUserRepository appUserRepository, AppUserServiceImpl appUserServiceImpl) {
 		return (args) -> {
 			log.info("Demo is working");
-			
+
+			// appUserRepository.deleteAll();
+
 			for (int i = 0; i < 10; i++) {
 				AppUser tempAppUser = new AppUser();
 				tempAppUser.setName("Biraj");
 				tempAppUser.setAddress("India");
 				tempAppUser.setPhoneNumber(123456789L);
 
-				appUserRepository.save(tempAppUser);
+				// appUserRepository.save(tempAppUser);
+
+				appUserServiceImpl.createAppUser(tempAppUser);
+
+				// AppUserServiceImpl.createAppUser(tempAppUser);
+
 			}
+
 			for (AppUser tempAppUser : appUserRepository.findAll()) {
 				log.info(tempAppUser.toString());
 			}
