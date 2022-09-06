@@ -5,9 +5,14 @@ import java.util.Optional;
 
 public interface AppUserService {
 
-	public void createAppUser();
-
 	Optional<AppUser> findAppUser(Long id);
 
 	List<AppUser> getAppUsers();
+
+	AppUser createAppUser(AppUser appUser);
+	
+	// Delete -> AppUser based on ID.
+	
+	// Update -> AppUser Details based on the ID
+	
 }

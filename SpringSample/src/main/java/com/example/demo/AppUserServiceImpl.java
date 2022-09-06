@@ -12,31 +12,25 @@ public class AppUserServiceImpl implements AppUserService {
 	@Autowired
 	private AppUserRepository appUserRepository;
 
-	public void createAppUser(AppUser tempAppUser) {
-
-		System.out.println("createAppUser");
-		appUserRepository.save(tempAppUser);
-	}
-	
 	@Override
 	public Optional<AppUser> findAppUser(Long id) {
-		
+
 		return appUserRepository.findById(id);
-		
+
 	}
 
 	@Override
-	public void createAppUser() {
+	public AppUser createAppUser(AppUser tempAppUser) {
 		// TODO Auto-generated method stub
-		
+		System.out.println("createAppUser");
+		return appUserRepository.save(tempAppUser);
 	}
 
 	@Override
 	public List<AppUser> getAppUsers() {
-		
-		return (List<AppUser>) appUserRepository.findAll();
-		
-	}
 
+		return (List<AppUser>) appUserRepository.findAll();
+
+	}
 
 }
