@@ -11,8 +11,11 @@ public interface AppUserService {
 
 	AppUser createAppUser(AppUser appUser);
 	
+	AppUser updateAppUser(AppUser appUser);
+	
 	// Delete -> AppUser based on ID.
 	
+	boolean deleteAppUser(Long id);
 	// Update -> AppUser Details based on the ID
 	
 }

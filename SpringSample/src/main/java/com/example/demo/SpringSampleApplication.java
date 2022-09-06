@@ -23,19 +23,6 @@ public class SpringSampleApplication {
 		return (args) -> {
 			log.info("Demo is working");
 
-			// appUserRepository.deleteAll();
-			/*
-			 * for (int i = 0; i < 10; i++) { AppUser tempAppUser = new AppUser();
-			 * tempAppUser.setName("Biraj"); tempAppUser.setAddress("India");
-			 * tempAppUser.setPhoneNumber(123456789L);
-			 * 
-			 * appUserServiceImpl.createAppUser(tempAppUser);
-			 * 
-			 * }
-			 * 
-			 * for (AppUser tempAppUser : appUserRepository.findAll()) {
-			 * log.info(tempAppUser.toString()); }
-			 */
 
 		};
 	}

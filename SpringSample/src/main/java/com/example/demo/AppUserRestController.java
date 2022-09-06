@@ -57,21 +57,25 @@ public class AppUserRestController {
 
 		// Add logic to get the data from request.
 
-		/*
-		 * tempAppUser.setName("Biraj"); tempAppUser.setAddress("India");
-		 * tempAppUser.setPhoneNumber(123456789L);
-		 */
-
 		return appUserServiceImpl.createAppUser(tempAppUser);
 
 	}
 	
-	@DeleteMapping("/deleteAppUser")
-	public String deleteAppUser() {
-		// Logic to delete the AppUser based on the ID.
-	
+	@PostMapping("/updateAppUser")
+	public AppUser updateAppUser() {
 
-		return "Deleted";
+		AppUser tempAppUser = new AppUser();
+
+		// Add logic to get the data from request.
+
+		return appUserServiceImpl.updateAppUser(tempAppUser);
+
+	}
+
+	@DeleteMapping("/deleteAppUser")
+	public boolean deleteAppUser(@RequestParam(value = "id") Long id) {
+		// Logic to delete the AppUser based on the ID.
+		return appUserServiceImpl.deleteAppUser(id);
 
 	}
 }

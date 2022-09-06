@@ -6,6 +6,9 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import lombok.extern.java.Log;
+
+@Log
 @Service
 public class AppUserServiceImpl implements AppUserService {
 
@@ -31,6 +34,30 @@ public class AppUserServiceImpl implements AppUserService {
 
 		return (List<AppUser>) appUserRepository.findAll();
 
+	}
+
+	@Override
+	public boolean deleteAppUser(Long id) {
+
+		boolean deleteFlag = false;
+		try {
+			appUserRepository.deleteById(id);
+			deleteFlag = true;
+
+		} catch (Exception e) {
+			log.info(e.getMessage());
+		}
+		// TODO Auto-generated method stub
+
+		return deleteFlag;
+
+	}
+
+	@Override
+	public AppUser updateAppUser(AppUser appUser) {
+		// TODO Auto-generated method stub
+		appUserRepository.save(appUser);
+		return null;
 	}
 
 }
