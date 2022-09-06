@@ -1,10 +1,13 @@
 package com.example.demo;
 
-import org.springframework.stereotype.Service;
+import java.util.List;
+import java.util.Optional;
 
-@Service
 public interface AppUserService {
-	
-	public static void createAppUser() {}
 
+	public void createAppUser();
+
+	Optional<AppUser> findAppUser(Long id);
+
+	List<AppUser> getAppUsers();
 }
