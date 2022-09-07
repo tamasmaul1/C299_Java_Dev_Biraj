@@ -19,9 +19,16 @@ public class SpringSampleApplication {
 	}
 
 	@Bean
-	public CommandLineRunner demo(AppUserRepository appUserRepository, AppUserServiceImpl appUserServiceImpl) {
+	public CommandLineRunner demo(QuestionRepository questionRepository) {
 		return (args) -> {
 			log.info("Demo is working");
+			
+			Question dummyQuestion = new Question();
+			
+			for (Answer ans : dummyQuestion.getAnswers())
+			{
+				ans.getDetails();
+			}
 
 
 		};

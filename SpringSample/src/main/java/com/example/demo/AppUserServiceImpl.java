@@ -55,7 +55,9 @@ public class AppUserServiceImpl implements AppUserService {
 
 	@Override
 	public AppUser updateAppUser(AppUser appUser) {
-		// TODO Auto-generated method stub
+		
+		//Logic to sanitize the incoming data 
+		//Create Util Class and implement Logic. 
 		appUserRepository.save(appUser);
 		return null;
 	}

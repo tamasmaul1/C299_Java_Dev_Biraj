@@ -1,15 +1,23 @@
 package com.example.demo;
 
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import lombok.extern.java.Log;
+
 @RestController
+@Log
 public class AppUserRestController {
 
 	@Autowired
@@ -51,24 +59,21 @@ public class AppUserRestController {
 	}
 
 	@PostMapping("/createAppUser")
-	public AppUser createAppUser() {
+	public AppUser createAppUser(@RequestBody AppUser tempAppUser) {
 
-		AppUser tempAppUser = new AppUser();
-
-		// Add logic to get the data from request.
-
+		log.info(tempAppUser.toString());
 		return appUserServiceImpl.createAppUser(tempAppUser);
 
 	}
-	
+
 	@PostMapping("/updateAppUser")
-	public AppUser updateAppUser() {
-
+	public AppUser updateAppUser(@RequestParam Map<String,String> allParams) {
+		
+		System.out.println("Parameters are " + allParams.entrySet());
+		
 		AppUser tempAppUser = new AppUser();
-
-		// Add logic to get the data from request.
-
-		return appUserServiceImpl.updateAppUser(tempAppUser);
+		//return appUserServiceImpl.updateAppUser();
+		return tempAppUser;
 
 	}
 
