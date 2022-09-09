@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.appUser;
 
 import java.util.Iterator;
 import java.util.List;

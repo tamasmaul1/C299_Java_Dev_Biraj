@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.answer;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,10 +20,10 @@ import lombok.ToString;
 public class Answer {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long answerid;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long AnswerId;
 	private String ShortInfo;
 	private String Details;
 	private Long OwnerId;
-
+	private Long QuestionId;
 }

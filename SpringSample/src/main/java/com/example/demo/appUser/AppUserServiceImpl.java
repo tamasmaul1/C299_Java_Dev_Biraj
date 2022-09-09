@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.appUser;
 
 import java.util.List;
 import java.util.Optional;
@@ -47,8 +47,6 @@ public class AppUserServiceImpl implements AppUserService {
 		} catch (Exception e) {
 			log.info(e.getMessage());
 		}
-		// TODO Auto-generated method stub
-
 		return deleteFlag;
 
 	}
