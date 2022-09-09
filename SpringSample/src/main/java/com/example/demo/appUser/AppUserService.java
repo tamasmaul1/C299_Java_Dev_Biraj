@@ -1,7 +1,8 @@
-package com.example.demo;
+package com.example.demo.appUser;
 
 import java.util.List;
 import java.util.Optional;
+
 
 public interface AppUserService {
 
@@ -13,9 +14,10 @@ public interface AppUserService {
 	
 	AppUser updateAppUser(AppUser appUser);
 	
+	boolean deleteAppUser(Long id);
+	
 	// Delete -> AppUser based on ID.
 	
-	boolean deleteAppUser(Long id);
 	// Update -> AppUser Details based on the ID
 	
 }
